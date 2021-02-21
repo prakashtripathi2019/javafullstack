@@ -5,13 +5,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+   
 @Entity
 @Table(name ="user_reg")
 public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	public Integer getId() {
+	private String name;
+    private String email;
+    private int experience;
+    private String domain;
+    public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
@@ -29,8 +34,17 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	private String name;
-	private String email;
-	
+	public int getExperience() {
+		return experience;
+	}
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+	public String getDomain() {
+		return domain;
+	}
+	public void setDomain(String domain) {
+		this.domain = domain;
+	}
 
 }
